@@ -1,30 +1,17 @@
-= @post.title
-%br
-= @post.body
-
-%br
-%br
-
-= link_to "Edit", edit_post_path(@post)
-= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure ?" }
-
 #post_show_content.skinny_wrapper.wrapper_padding
   %header
-    %p.date Friday April 10th
-    %h1 The Do List
+    %p.date= @post.created_at.strftime('%A, %B %d')
+    %h1= @post.title
     %hr
 
   #content
-    %h2 Shaman Stumptown Palo
-  %p
-    Hammock enamel pin cold-pressed, shaman stumptown palo santo typewriter celiac paleo tilde taiyaki kale chips subway tile roof party cray. Bushwick tote bag quinoa humblebrag ennui microdosing neutra fingerstache truffaut. Letterpress hexagon organic, affogato copper mug 90's literally dreamcatcher sustainable seitan small batch adaptogen aesthetic. Small batch crucifix seitan ethical, disrupt ugh hoodie austin chillwave helvetica photo booth adaptogen. Poke green juice hashtag crucifix dreamcatcher food truck pug kogi edison bulb four loko hell of adaptogen. Schlitz small batch pabst pok pok direct trade lyft pork belly. Copper mug wolf beard small batch aesthetic. Put a bird on it venmo single-origin coffee salvia small batch try-hard, marfa banjo seitan irony etsy tilde. Tbh four dollar toast subway tile fanny pack pok pok waistcoat distillery tofu copper mug jianbing tumeric pug raw denim meh master cleanse. Copper mug cardigan taiyaki cold-pressed. Synth typewriter drinking vinegar freegan glossier edison bulb, activated charcoal palo santo. Chambray brunch bespoke kale chips kinfolk. 3 wolf moon sriracha chillwave truffaut narwhal tilde marfa listicle kinfolk offal.
-  %p
-    Forage poutine single-origin coffee, 90's marfa salvia asymmetrical raclette truffaut. Enamel pin 8-bit knausgaard tacos flexitarian ennui jianbing kinfolk intelligentsia mlkshk street art listicle raw denim man bun. Man bun sustainable selfies raw denim disrupt cornhole cray +1. Offal cronut palo santo, hella heirloom etsy leggings celiac YOLO affogato. Live-edge truffaut cray lomo, seitan everyday carry leggings freegan aesthetic neutra. Jean shorts pop-up humblebrag occupy unicorn. Af yuccie meggings bicycle rights cray truffaut poutine green juice health goth hella. Waistcoat cold-pressed cardigan, brooklyn cray air plant ethical photo booth kale chips beard plaid chillwave chia salvia. Kale chips asymmetrical iPhone chambray schlitz portland pinterest banjo. Hella street art cred austin kogi franzen pug. Fingerstache vinyl venmo, try-hard heirloom vape DIY trust fund quinoa hashtag. Meggings stumptown shabby chic, kitsch roof party tbh beard live-edge tousled williamsburg. Typewriter iPhone keytar vaporware small batch narwhal selvage.
+    = @post.body
 
   %hr
 
   #share_box
     %p Share To do list
     %i.fa.fa-twitter
+    %i.fa.fa-facebook
 
-  %hr 
+  %hr
