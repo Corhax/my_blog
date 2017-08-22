@@ -1,1 +1,29 @@
-%h1 posts
+%h1#page_title Stuff I've writeen
+
+#posts_wrapper.skinny_wrapper
+  .post
+    %p.date
+      Friday
+    %h2
+      %a{:href => "/"} The Do List
+    %hr
+
+  .post
+    %p.date
+      Friday
+    %h2
+      %a{:href => "/"} The Do List
+    %hr
+
+  .post
+    %p.date
+      Friday
+    %h2
+      %a{:href => "/"} The Do List
+    %hr
+
+.pagination
+  %span.previous_page.disabled Previous
+  %em.current 1
+  %a{:href => "#", :rel => "next"} 2
+  %a.next_page{:href => "#"} Next
