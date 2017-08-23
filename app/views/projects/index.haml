@@ -1,0 +1,9 @@
+%h1#page_title Stuff i build
+
+#posts_wrapper.skinny_wrapper
+  - @projects.each do |project|
+    .post
+      %p.date= project.created_at.strftime('%A, %B %d')
+      %h2
+        %a{:href => "/"}= link_to project.title, project
+      %hr

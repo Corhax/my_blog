@@ -1,0 +1,20 @@
+#post_show_content.skinny_wrapper.wrapper_padding
+  %header
+    %p.date= @project.created_at.strftime('%A, %B %d')
+    %h1= @project.title
+    %hr
+
+  #content
+    = @project.body
+
+    %br
+    %br
+
+    .button_wrapper
+      %a.project_button{:href => "#{@project.link}", :target => "_blank"}
+        Visit #{@project.title}
+  %hr
+
+  = link_to "Edit", edit_project_path(@project)
+  = link_to "Delete", project_path(@project), method: :delete,
+        data: { confirm: "Are you sure ?" }

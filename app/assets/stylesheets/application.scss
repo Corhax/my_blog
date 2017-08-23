@@ -51,6 +51,10 @@ body {
   clear: both;
 }
 
+.hidden {
+  display: none;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $dark;
 }
@@ -175,4 +179,17 @@ input[type="submit"], .button {
     border: 2px solid $highlight;
     color: $highlight;
   }
+}
+
+.project_button {
+  background: $highlight;
+  color: $white;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.button_wrapper {
+  margin: 4em 0 0 0;
+  text-align: center;
+
 }
