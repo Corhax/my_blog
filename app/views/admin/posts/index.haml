@@ -5,7 +5,8 @@
     .post
       %p.date= post.created_at.strftime('%A, %B %d')
       %h2
-        %a{:href => "/"}= link_to post.title, post
-      %hr#none
+        = link_to post.title, admin_post_path(post)
+      %hr
 
 = paginate @posts
+= link_to "New", new_admin_post_path

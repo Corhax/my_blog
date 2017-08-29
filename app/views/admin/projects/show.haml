@@ -2,7 +2,7 @@
   %header
     %p.date= @project.created_at.strftime('%A, %B %d')
     %h1= @project.title
-    %hr#none
+    %hr
 
   #content
     = @project.body
@@ -13,4 +13,8 @@
     .button_wrapper
       %a.project_button{:href => "#{@project.link}", :target => "_blank"}
         Visit #{@project.title}
-  %hr#none
+  %hr
+
+= link_to "Edit", edit_admin_project_path
+= link_to "Delete", admin_project_path,
+  method: :delete, data: { confirm: "Are you sure?" }

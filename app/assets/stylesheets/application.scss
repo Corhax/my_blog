@@ -10,12 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import "welcome";
+ @import "posts_projects";
+ @import "normalize";
 
 
 $dark: #424652;
@@ -29,7 +31,8 @@ $border: #E9E9E9;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .wrapper {
@@ -98,35 +101,40 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  border-top: 2px solid #8BC6DB;
+  border-top: 2px solid #c3003b;
   margin: 2rem 0;
 }
 
+#none {
+  border-top: 2px solid white;
+}
+
+
 #main_navigation {
+  background: grey;
   padding: 2.5em 5%;
-  border-bottom: 1px solid $border;
   .name {
     font-weight: 700;
     font-size: .8em;
     letter-spacing: 4px;
     text-transform: uppercase;
-    border: 2px solid $border;
     padding: 1rem;
     text-decoration: none;
-    color: $dark;
+    color: black;
     float: left;
   }
   nav {
     float: right;
     padding-top: 1.5rem;
     a {
-      color: $dark;
+      color: black;
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
     }
   }
 }
+
 
 #main_footer {
   padding: 2.5em 5%;
@@ -136,6 +144,7 @@ hr {
     font-size: .9em;
     margin-bottom: 0;
   }
+
 
   nav {
     float: right;

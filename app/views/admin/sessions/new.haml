@@ -1,0 +1,15 @@
+.login
+  .login-screen
+    .app-title
+      %h1 Login
+    .login-form
+      .control-group
+        = form_for [:admin, @admin], :url => admin_login_path do |f|
+          %div
+            = f.label :email
+            = f.text_field :email
+          %br
+            = f.label :password
+            = f.password_field :password
+          %br
+            = f.button :submit

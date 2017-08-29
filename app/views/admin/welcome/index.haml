@@ -1,7 +1,7 @@
 .wrapper.wrapper_padding.clearfix
 
   .col-1.about.homepage_content
-    %h2 About Me
+    %h2 About me
     %hr
     %p My name is Dimitar Dimitrov 18 years old from Bulgaria i am learning Ruby on Rails and this is the project i've made to show my works. If you want to reach me, you can do it in the contact page send me email and i will answer when i can!
 
@@ -10,12 +10,12 @@
     %hr
 
     - @posts.each do |post|
-      %h3= link_to post.title, post
+      %h3= link_to post.title, admin_post_path(post)
       %p.date= post.created_at.strftime("%A, %b %d")
 
   .col-3.homepage_content
     %h2 My Work
     %hr
       - @projects.each do |project|
-        %h3= link_to project.title, project
+        %h3= link_to project.title, admin_project_path(project)
         %p.date= project.created_at.strftime("%A, %b %d")

@@ -2,13 +2,17 @@
   %header
     %p.date= @post.created_at.strftime('%A, %B %d')
     %h1= @post.title
-    %hr#none
+    %hr
 
   #content
     = @post.body
 
-  %hr#none
+  %hr
 
-  %hr#none
+
 
   = render 'disqus'
+
+= link_to "Edit", edit_admin_post_path(@post)
+= link_to "Delete", admin_post_path,
+  method: :delete, data: { confirm: "Are you sure?" }
